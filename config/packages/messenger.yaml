@@ -1,0 +1,9 @@
+# Transport config and routing are provided by MicroservicesSharedBundle.
+# Only service-specific overrides live here.
+framework:
+    messenger:
+        failure_transport: failed
+
+        transports:
+            failed:
+                dsn: 'doctrine://default?queue_name=failed'
